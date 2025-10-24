@@ -5,6 +5,7 @@ export interface Props {
 }
 const { title, description } = Astro.props
 ---
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,11 +14,20 @@ const { title, description } = Astro.props
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://js.hsforms.net" />
+    <link rel="dns-prefetch" href="https://js.hsforms.net" />
   </head>
   <body>
     <slot />
   </body>
 </html>
+
 <style is:global>
-  html { font-family: system-ui, sans-serif; }
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/inter.woff2') format('woff2');
+    font-display: swap;
+  }
+  html { font-family: Inter, system-ui, sans-serif; }
 </style>
