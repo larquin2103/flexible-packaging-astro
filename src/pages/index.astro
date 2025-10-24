@@ -3,18 +3,26 @@ import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import Features from '../components/Features.astro'
 import Testimonials from '../components/Testimonials.astro'
-import HubspotForm from '../components/HubspotForm.jsx'
-import CTA from '../components/CTA.astro'
+import Calculator from '../components/Calculator.jsx'
+import Gallery3D from '../components/Gallery3D.jsx'
+import ChatBot from '../components/ChatBot.jsx'
+import CTASticky from '../components/CTASticky.astro'
 ---
-<Layout title="Fábrica de Envases Flexibles" description="Soluciones de empaque personalizadas. Cotiza ya.">
+
+<Layout title="Envases Flexibles de Alta Calidad" description="Soluciones de empaque personalizadas. Cotiza ya.">
   <Hero />
   <Features />
+  <Gallery3D client:visible />
+  <Calculator client:visible />
   <Testimonials />
   <section id="cotizar" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Solicita una Cotización</h2>
-      <HubspotForm client:visible />
+      <h2 class="text-3xl font-bold text-center mb-8">Solicita tu Cotización</h2>
+      <div class="max-w-xl mx-auto">
+        <HubspotForm client:visible />
+      </div>
     </div>
   </section>
-  <CTA />
+  <CTASticky />
+  <ChatBot client:load />
 </Layout>
