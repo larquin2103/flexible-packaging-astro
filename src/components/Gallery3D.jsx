@@ -47,4 +47,4 @@ export default function Gallery3D() {
       </div>
     </section>
   )
-    }
+}
