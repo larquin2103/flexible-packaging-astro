@@ -1,14 +1,139 @@
-<section class="py-16 bg-white">
+<section id="testimonios" class="py-20 bg-gradient-to-br from-gray-50 to-white">
   <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-50 p-6 rounded-lg shadow" itemscope itemtype="https://schema.org/Review">
-        <p itemprop="reviewBody">“Calidad impresionante y entrega puntual. ¡Recomendados!”</p>
-        <div class="mt-4 text-sm font-semibold" itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <span itemprop="name">María Gómez – Distribuidora Alimentos S.A.</span>
+    <h2 class="text-4xl font-bold text-center mb-4">Clientes que ya confían en nosotros</h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Desde grandes cadenas agroalimentarias hasta artesanos del café: todos lograron mejorar sus ventas con nuestros envases.
+    </p>
+
+    <!-- Grid de testimonios concretos -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- 1. OSDE ALIMENTARIA EMBER -->
+      <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col" itemscope itemtype="https://schema.org/Review">
+        <div class="flex items-center mb-4">
+          <img src="/images/logos/osde-ember.webp" alt="OSDE Alimentaria Ember" class="w-16 h-16 rounded-full object-cover mr-4" />
+          <div>
+            <h3 class="font-bold text-lg" itemprop="author">OSDE Alimentaria Ember</h3>
+            <span class="text-sm text-gray-500">Bobinas litografiadas</span>
+          </div>
         </div>
-      </div>
-      <!-- Repite bloques -->
+        <blockquote class="text-gray-700 mb-4" itemprop="reviewBody">
+          “Las bobinas litografiadas que nos entregan redujeron nuestros tiempos de envasado en 25%. La calidad de impresión es impecable y el acabado brillante realza nuestra marca en estantería.”
+        </blockquote>
+        <div class="mt-auto flex items-center text-sm text-gray-500">
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="OSDE Alimentaria Ember" />
+          </span>
+          ⭐⭐⭐⭐⭐ 5/5
+        </div>
+      </article>
+
+      <!-- 2. GE Agroalimentario -->
+      <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col" itemscope itemtype="https://schema.org/Review">
+        <div class="flex items-center mb-4">
+          <img src="/images/logos/ge-agro.webp" alt="GE Agroalimentario" class="w-16 h-16 rounded-full object-cover mr-4" />
+          <div>
+            <h3 class="font-bold text-lg" itemprop="author">GE Agroalimentario</h3>
+            <span class="text-sm text-gray-500">Envase para café HOLA</span>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 mb-4" itemprop="reviewBody">
+          “El aroma del café se mantiene intacto gracias a la barrera de oxígeno de los envases. Nuestros clientes notaron la diferencia y aumentamos las re-compras en 30%.”
+        </blockquote>
+        <div class="mt-auto flex items-center text-sm text-gray-500">
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="GE Agroalimentario" />
+          </span>
+          ⭐⭐⭐⭐⭐ 5/5
+        </div>
+      </article>
+
+      <!-- 3. EMPRESA DE LEVADURAS Y FERMENTOS SA (MINAL) -->
+      <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col" itemscope itemtype="https://schema.org/Review">
+        <div class="flex items-center mb-4">
+          <img src="/images/logos/minal.webp" alt="MINAL" class="w-16 h-16 rounded-full object-cover mr-4" />
+          <div>
+            <h3 class="font-bold text-lg" itemprop="author">MINAL</h3>
+            <span class="text-sm text-gray-500">Bobinas laminadas barrera aluminio</span>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 mb-4" itemprop="reviewBody">
+          “Las bobinas de barrera de aluminio garantizan la conservación perfecta de nuestros fermentos. Cumplimos la norma BRC gracias a sus acabados sin residuos.”
+        </blockquote>
+        <div class="mt-auto flex items-center text-sm text-gray-500">
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="MINAL" />
+          </span>
+          ⭐⭐⭐⭐⭐ 5/5
+        </div>
+      </article>
+
+      <!-- 4. TORREFACTORA MARIEL -->
+      <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col" itemscope itemtype="https://schema.org/Review">
+        <div class="flex items-center mb-4">
+          <img src="/images/logos/mariel.webp" alt="Torrefactora Mariel" class="w-16 h-16 rounded-full object-cover mr-4" />
+          <div>
+            <h3 class="font-bold text-lg" itemprop="author">Torrefactora Mariel</h3>
+            <span class="text-sm text-gray-500">Envases para café</span>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 mb-4" itemprop="reviewBody">
+          “El aroma del café se mantiene intacto gracias a la barrera de oxígeno de los envases. Nuestros clientes notaron la diferencia y aumentamos las re-compras en 30%.”
+        </blockquote>
+        <div class="mt-auto flex items-center text-sm text-gray-500">
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Torrefactora Mariel" />
+          </span>
+          ⭐⭐⭐⭐⭐ 5/5
+        </div>
+      </article>
+
+      <!-- 5. EMPRESA AGROINDUSTRIAL CÍTRICOS CEBALLOS -->
+      <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col" itemscope itemtype="https://schema.org/Review">
+        <div class="flex items-center mb-4">
+          <img src="/images/logos/citricos-ceballos.webp" alt="Cítricos Ceballos" class="w-16 h-16 rounded-full object-cover mr-4" />
+          <div>
+            <h3 class="font-bold text-lg" itemprop="author">Cítricos Ceballos</h3>
+            <span class="text-sm text-gray-500">Doypack para cítricos</span>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 mb-4" itemprop="reviewBody">
+          “Los doypack con válvula de desgasificación permiten que nuestros cítricos confitados se mantengan frescos sin hinchamiento del paquete. Redujimos devoluciones a cero.”
+        </blockquote>
+        <div class="mt-auto flex items-center text-sm text-gray-500">
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Cítricos Ceballos" />
+          </span>
+          ⭐⭐⭐⭐⭐ 5/5
+        </div>
+      </article>
+
+      <!-- 6. GAC Doypack -->
+      <!--article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col" itemscope itemtype="https://schema.org/Review">
+        <div class="flex items-center mb-4">
+          <img src="/images/logos/gac.webp" alt="GAC" class="w-16 h-16 rounded-full object-cover mr-4" />
+          <div>
+            <h3 class="font-bold text-lg" itemprop="author">GAC</h3>
+            <span class="text-sm text-gray-500">Doypack para snacks</span>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 mb-4" itemprop="reviewBody">
+          “El acabado mate-soft touch de los doypack elevó la percepción de valor de nuestros snacks. Aumentamos el ticket medio en 18% sin cambiar el producto.”
+        </blockquote>
+        <div class="mt-auto flex items-center text-sm text-gray-500">
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="GAC" />
+          </span>
+          ⭐⭐⭐⭐⭐ 5/5
+        </div>
+      </article-->
+    </div>
+
+    <!-- CTA final -->
+    <div class="text-center mt-12">
+      <a href="#cotizar" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition">
+        Solicitar Cotización
+      </a>
     </div>
   </div>
 </section>
