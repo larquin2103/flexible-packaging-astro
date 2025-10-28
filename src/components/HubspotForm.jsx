@@ -9,7 +9,7 @@ export default function HubspotForm() {
         window.hbspt.forms.create({
           portalId: import.meta.env.PUBLIC_HUBSPOT_PORTAL_ID,
           formId: import.meta.env.PUBLIC_HUBSPOT_FORM_ID,
-          target: '#hubspot-form',
+          target: '#hubspot-form'
         })
       }
     }
