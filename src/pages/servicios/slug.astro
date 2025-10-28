@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import SeoMeta from '../../components/SeoMeta.astro'
+
+export async function getStaticPaths() {
+  const servicios = [
+    { slug: 'bolsas-plasticas',       title: 'Bolsas Plásticas Impresas',      descripcion: 'BOPP, PET y PE personalizados con impresión full-color.' },
+    { slug: 'stand-up-pouch',         title: 'Stand Up Pouch',                 descripcion: 'Doypack con cierre zip, ventana y máxima barrera.' },
+    { slug: 'envases-aluminio',       title: 'Envases de Aluminio',            descripcion: 'Barrera total contra luz, oxígeno y humedad.' },
+    { slug: 'flat-bottom-bags',       title: 'Flat Bottom Bags',               descripcion: 'Base plana y 5 caras imprimibles para café y snacks.' },
+    { slug: 'spout-pouches',          title: 'Spout Pouches',                  descripcion: 'Tapa válvula para líquidos, salsas y cosméticos.' },
+    { slug: 'recyclable-pouches',     title: 'Envases Reciclables',            descripcion: 'Soluciones sostenibles mono-material (recicla-1).' }
+  ]
+  return servicios.map((s) => ({ params: { slug: s.slug }, props: s }))
+}
+
+const { title, descripcion } = Astro.props
+---
+
+<Layout title={`${title} | Tu Fábrica`} description={descripcion}>
+  <SeoMeta title={title} description={descripcion} />
+  <section class="py-20 bg-gradient-to-br from-blue-50 to-white">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl font-bold mb-6">{title}</h1>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-10">{descripcion}</p>
+      <a href="#cotizar" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition">Solicitar Cotización</a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Características del servicio</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 rounded-xl bg-blue-50"><h3 class="font-bold mb-2">Mínimo 1,000 unidades</h3><p class="text-sm text-gray-600">Ideal para lanzamientos.</p></div>
+        <div class="p-6 rounded-xl bg-green-50"><h3 class="font-bold mb-2">Entrega 7-10 días</h3><p class="text-sm text-gray-600">Producción nacional exprés.</p></div>
+        <div class="p-6 rounded-xl bg-yellow-50"><h3 class="font-bold mb-2">Impresión 360°</h3><p class="text-sm text-gray-600">Hasta 8 colores + barniz.</p></div>
+      </div>
+    </div>
+  </section>
+</Layout>

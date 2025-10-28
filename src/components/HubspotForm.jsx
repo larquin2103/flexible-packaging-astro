@@ -7,8 +7,8 @@ export default function HubspotForm() {
     script.onload = () => {
       if (window.hbspt) {
         window.hbspt.forms.create({
-          portalId: import.meta.env.PUBLIC_HUBSPOT_PORTAL_ID,
-          formId: import.meta.env.PUBLIC_HUBSPOT_FORM_ID,
+          portalId: "244032023",
+          formId: "279c7ee3-2af5-4bbd-864e-07734436b8e0",
           target: '#hubspot-form'
         })
       }

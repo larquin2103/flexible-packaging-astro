@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title: string
+  description: string
+  image?: string
+  canonical?: string
+}
+
+const {
+  title,
+  description,
+  image = '/og-default.jpg',
+  canonical
+} = Astro.props
+
+const site = Astro.site || 'https://fabrica-envases-flexibles.netlify.app'
+const ogImage = new URL(image, site).href
+const ogUrl   = canonical ? new URL(canonical, site).href : Astro.url.href
+---
+
+<!-- Básicos -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={ogUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={ogUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={ogUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Idioma -->
+<meta property="og:locale" content="es_ES" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<!-- Schema.org básico (Organization) -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "TuFábrica de Envases Flexibles",
+  url: site,
+  logo: `${site}/logo.png`,
+  sameAs: [
+    "https://www.facebook.com/tu-fabrica-envases",
+    "https://www.instagram.com/tu-fabrica-envases",
+    "https://wa.me/521234567890"
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+52-123-456-7890",
+    contactType: "Sales",
+    areaServed: "MX",
+    availableLanguage: "Spanish"
+  }
+})} />

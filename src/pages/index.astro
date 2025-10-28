@@ -7,21 +7,24 @@ import Calculator from '../components/Calculator.jsx'
 import Gallery3D from '../components/Gallery3D.jsx'
 import CTASticky from '../components/CTASticky.astro'
 import HubspotForm from '../components/HubspotForm.jsx'
+import ServicesHome from '../components/ServicesHome.astro'
 ---
 
 <Layout title="Envases Flexibles de Alta Calidad" description="Soluciones de empaque personalizadas. Cotiza ya.">
   <Hero />
   <Features />
-  <Gallery3D client:visible />
-  <Calculator client:visible />
+  <!--ESTA LÍNEA-->
+  <ServicesHome />
+  <!--<Calculator client:visible /-->
   <Testimonials />
   <section id="cotizar" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Solicita tu Cotización</h2>
-      <div class="max-w-xl mx-auto">
-        <HubspotForm client:visible />
-      </div>
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Solicita tu Cotización sin Compromiso</h2>
+    <div class="max-w-xl mx-auto">
+      <HubspotForm client:visible />   <!-- ← ESTA LÍNEA -->
     </div>
+   </div>
   </section>
+  
   <CTASticky />
 </Layout>
