@@ -14,14 +14,14 @@ export default function Gallery3D() {
       renderer.setSize(300, 300)
       mount.current.appendChild(renderer.domElement)
 
-      const geom = [ [2,3,0.5], [2,2,2], [1.5,3,1] ][i]
+      const geom = [[2, 3, 0.5], [2, 2, 2], [1.5, 3, 1]][i]
       const geo = new THREE.BoxGeometry(...geom)
       const mat = new THREE.MeshPhongMaterial({ color: [0x00ff88, 0xff8800, 0x8800ff][i] })
       const mesh = new THREE.Mesh(geo, mat)
       scene.add(mesh)
 
       const light = new THREE.DirectionalLight(0xffffff, 1)
-      light.position.set(5,5,5)
+      light.position.set(5, 5, 5)
       scene.add(light)
 
       camera.position.z = 5
@@ -36,13 +36,13 @@ export default function Gallery3D() {
   }, [])
 
   return (
-    <section class="py-16 bg-gray-100">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Explora nuestros productos en 3D</h2>
-        <div class="grid md:grid-cols-3 gap-8 justify-items-center">
-          <div><div ref={mount1} class="w-72 h-72 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl shadow-lg" /></div>
-          <div><div ref={mount2} class="w-72 h-72 bg-gradient-to-br from-orange-100 to-green-100 rounded-xl shadow-lg" /></div>
-          <div><div ref={mount3} class="w-72 h-72 bg-gradient-to-br from-purple-100 to-orange-100 rounded-xl shadow-lg" /></div>
+    <section className="py-16 bg-gray-100">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-12">Explora nuestros productos en 3D</h2>
+        <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+          <div className="w-72 h-72 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl shadow-lg" ref={mount1} />
+          <div className="w-72 h-72 bg-gradient-to-br from-orange-100 to-green-100 rounded-xl shadow-lg" ref={mount2} />
+          <div className="w-72 h-72 bg-gradient-to-br from-purple-100 to-orange-100 rounded-xl shadow-lg" ref={mount3} />
         </div>
       </div>
     </section>

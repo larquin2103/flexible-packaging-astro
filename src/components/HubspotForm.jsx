@@ -16,5 +16,5 @@ export default function HubspotForm() {
     document.body.appendChild(script)
   }, [])
 
-  return <div id="hubspot-form" class="max-w-xl mx-auto" />
+  return <div id="hubspot-form" className="max-w-xl mx-auto" />
 }
