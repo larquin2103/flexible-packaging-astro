@@ -1,15 +1,46 @@
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-black">
-  <div id="particles" class="absolute inset-0"></div>
-  <div class="relative z-10 text-center text-white px-6">
-    <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-      Envases que <span class="text-yellow-400">Venden</span>
+---
+import ParticlesCanvas from './ParticlesCanvas.astro'
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/images/hero-envases.webp"
+      alt="Envases flexibles de TuFábrica"
+      class="w-full h-full object-cover opacity-60"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+
+  <!-- Partículas sutiles -->
+  <ParticlesCanvas />
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in-up">
+      Envases que <span class="text-yellow-400">Impulsan tu Ventas</span>
     </h1>
     <p class="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-200">
-      Flexibles, sostenibles y 100% personalizados
+      Flexibles, sostenibles y diseñados para que tu producto brille en estantería.
     </p>
-    <a href="#cotizar" class="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-4 px-8 rounded-full text-lg hover:scale-110 transform transition duration-300 animate-fade-in-up animation-delay-400">
-      Cotizar Ahora →
+
+    <!-- Botón CTA grande y brillante -->
+    <a
+      href="#cotizar"
+      class="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-4 px-8 rounded-full text-lg hover:scale-110 transform transition duration-300 shadow-lg hover:shadow-yellow-400/50 animate-fade-in-up animation-delay-400"
+    >
+      Solicitar Cotización Gratis →
     </a>
+
+    <!-- Gancho adicional (confianza) -->
+    <div class="mt-10 flex justify-center items-center space-x-4 text-sm animate-fade-in-up animation-delay-600">
+      <span>✅ Muestras Gratis</span>
+      <span>•</span>
+      <span>✅ Entrega 7-10 días</span>
+      <span>•</span>
+      <span>✅ 1,000+ Clientes Satisfechos</span>
+    </div>
   </div>
 </section>
 
@@ -21,4 +52,5 @@
   .animate-fade-in-up { animation: fade-in-up 1s ease-out forwards; }
   .animation-delay-200 { animation-delay: 0.2s; }
   .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
 </style>
