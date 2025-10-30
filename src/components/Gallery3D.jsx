@@ -14,7 +14,7 @@ export default function Gallery3D() {
       desc: 'Producto laminado 100% polietileno y reciclable para pastadental y productos cosméticos.',
     },
     {
-      name: 'Bosas para café',
+      name: 'Bolsas para café',
       img:  '/images/productos/spout-pouch.webp',
       desc: 'Bolsas para café laminadas y personalizadas según estructura del cilente, PET, AL, PEBD. Máxima barrera.',
     },
