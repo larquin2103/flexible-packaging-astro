@@ -4,7 +4,7 @@ const productos = [
   {
     name: 'Doypack personalizado',
     img:  '/images/productos/standup-pouch.webp',
-    desc: 'Doypack con cierre zip y ventana transparente. Ideal para café, snacks y superalimentos.',
+    desc: 'Doypack con cierre zip y ventana transparente. Ideal para café, snacks alimentos.',
   },
   {
     name: 'Tubos Colapsibles',
@@ -39,10 +39,10 @@ export default function Gallery3D() {
   return (
     <section className="py-12 md:py-16 bg-gradient-to-br from-purple-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">Catálogo de Productos</h2>
+        {/*<h2 className="text-2xl md:text-4xl font-bold text-center mb-4">Catálogo de Productos</h2>
         <p className="text-center text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
           Imágenes reales de nuestros envases. Haz clic para ampliar y solicitar cotización.
-        </p>
+        </p>*/}
 
         {/* Vista grande responsiva */}
         <div className="max-w-3xl mx-auto mb-8">
@@ -56,10 +56,7 @@ export default function Gallery3D() {
             <p className="text-gray-700 mb-4 text-sm md:text-base">{productos[selected].desc}</p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4">
               <a
-                href="#cotizar"
-                className="bg-yellow-500 text-black px-5 py-2 rounded-full hover:bg-yellow-400 transition font-bold text-sm md:text-base"
-              >
-                Solicitar Cotización
+                href="/#cotizar" class="ml-4 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Solicitar Cotización
               </a>
             </div>
           </div>
