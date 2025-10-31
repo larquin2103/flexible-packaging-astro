@@ -4,7 +4,7 @@ const productos = [
   {
     name: 'Doypack personalizado',
     img:  '/images/productos/standup-pouch.webp',
-    desc: 'Doypack con cierre zip y ventana transparente. Ideal para café, snacks alimentos.',
+    desc: 'Doypack con cierre zip y Bobinas personalizadas, bolasa. Ideal para café y alimentos.',
   },
   {
     name: 'Tubos Colapsibles',
